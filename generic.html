@@ -1,121 +1,387 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Project Portfolio - Jack Kgwale</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<title>My Profile — Jack Kgwale</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Jack Kgwale — Geography & Environmental Science graduate. GIS specialist, disaster risk reduction advocate, and youth-led climate action leader." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		:root {
+			--green: #2d6a4f;
+			--green-light: #52b788;
+			--earth: #a07850;
+			--cream: #f5f0e8;
+			--dark: #1a1a2e;
+			--accent: #e76f51;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		body, p, li, label {
+			font-family: 'DM Sans', sans-serif;
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">MY PROFILE</a>
-					</header>
+		/* ── PROFILE HERO ── */
+		.profile-hero {
+			background: linear-gradient(160deg, #0d1b2a 0%, #1a2f1e 100%);
+			padding: 5em 2em 4em;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">PROJECT PORTFOLIO</a></li>
-							<li class="active"><a href="generic.html">MY PROFILE</a></li>
-							<li><a href="elements.html">SKILLS</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+		.profile-hero::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(82,183,136,0.15) 0%, transparent 70%);
+			pointer-events: none;
+		}
 
-				<!-- Main -->
-					<div id="main">
+		.profile-hero .chip {
+			display: inline-block;
+			font-family: 'DM Mono', monospace;
+			font-size: 0.68em;
+			letter-spacing: 0.22em;
+			text-transform: uppercase;
+			color: var(--green-light);
+			border: 1px solid rgba(82,183,136,0.35);
+			padding: 0.4em 1.1em;
+			border-radius: 2em;
+			margin-bottom: 1.5em;
+			animation: fadeUp 0.7s ease both;
+		}
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>MY PROFILE<br />
-									</h1>
-									<p>Mapping Sustainable Futures: Applying GIS and Data Insights to Strengthen Disaster Preparedness, Enhance Environmental Management, and Foster Sustainable Development</p>
-								</header>
-								<div class="image main">
-  <img src="images/Jackt.jpg" alt="" style="width:100%; max-width:400px; height:auto; display:block; margin: 0 auto;" />
-</div>
-								<p>I'm Jack Kgwale, a Geography and Environmental Science graduate with a strong interest in how data, maps, and people intersect to shape more sustainable and resilient communities. My work focuses on using GIS and data-driven tools to tackle real-world challenges, from disaster preparedness to environmental monitoring. Through my leadership in youth-led initiatives like WAFARI, where we’ve raised flood awareness across Africa, I’ve seen the power of combining spatial thinking with community engagement. I’ve led teams, designed surveys, and used maps not just as technical tools, but as instruments of advocacy.</p>
-								<p>I’m skilled in remote sensing, spatial analysis, and environmental planning, but just as importantly, I care deeply about who benefits from this work. Whether I’m building flood preparedness campaigns, collaborating with researchers, or presenting to policymakers, I bring integrity, curiosity, and a drive to make a measurable difference. Adaptable and globally minded, I’m open to new challenges especially those that push me to grow and create impact beyond my immediate environment.</p>
-							</section>
+		.profile-hero h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: clamp(2.4em, 5vw, 3.8em);
+			font-weight: 900;
+			color: #fff;
+			line-height: 1.1;
+			margin-bottom: 0.3em;
+			animation: fadeUp 0.8s 0.1s ease both;
+		}
 
-					</div>
+		.profile-hero .tagline {
+			font-family: 'DM Sans', sans-serif;
+			font-weight: 300;
+			font-size: 1em;
+			color: rgba(255,255,255,0.6);
+			max-width: 520px;
+			margin: 0 auto 2em;
+			line-height: 1.65;
+			animation: fadeUp 0.9s 0.2s ease both;
+		}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="https://formspree.io/f/xnnvkdyj">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>South Africa<br />
-								Gauteng Johannesburg</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(+27) 71-477-8448 </a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">jackteekgwale@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							        <li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+		@keyframes fadeUp {
+			from { opacity: 0; transform: translateY(20px); }
+			to   { opacity: 1; transform: translateY(0); }
+		}
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+		/* ── PROFILE IMAGE ── */
+		.profile-img-wrap {
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto 2.5em;
+			border: 4px solid rgba(82,183,136,0.5);
+			box-shadow: 0 0 0 8px rgba(82,183,136,0.1);
+			animation: fadeUp 0.9s 0.15s ease both;
+		}
 
+		.profile-img-wrap img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+		}
+
+		/* ── ABOUT CARDS ── */
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5em;
+			margin: 2.5em 0;
+		}
+
+		@media (max-width: 680px) {
+			.about-grid { grid-template-columns: 1fr; }
+		}
+
+		.about-card {
+			background: #f8faf8;
+			border: 1px solid #e0ece6;
+			border-radius: 12px;
+			padding: 1.6em;
+		}
+
+		.about-card .card-icon {
+			font-size: 1.6em;
+			margin-bottom: 0.5em;
+		}
+
+		.about-card h3 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.05em;
+			color: var(--green);
+			margin-bottom: 0.5em;
+		}
+
+		.about-card p {
+			font-size: 0.9em;
+			line-height: 1.65;
+			color: #555;
+			margin: 0;
+		}
+
+		/* ── QUOTE ── */
+		.profile-quote {
+			background: linear-gradient(135deg, #2d6a4f, #52b788);
+			color: #fff;
+			border-radius: 12px;
+			padding: 2.5em 2em;
+			text-align: center;
+			margin: 2em 0;
+			position: relative;
+		}
+
+		.profile-quote::before {
+			content: '"';
+			font-family: 'Playfair Display', serif;
+			font-size: 6em;
+			line-height: 0.6;
+			opacity: 0.2;
+			position: absolute;
+			top: 0.4em;
+			left: 0.3em;
+		}
+
+		.profile-quote p {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.15em;
+			font-style: italic;
+			line-height: 1.6;
+			margin: 0 0 0.8em;
+			position: relative;
+			z-index: 1;
+			color: #fff;
+		}
+
+		.profile-quote cite {
+			font-family: 'DM Mono', monospace;
+			font-size: 0.7em;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			opacity: 0.75;
+		}
+
+		/* ── VALUES ── */
+		.values-list {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.8em;
+		}
+
+		.values-list li {
+			display: flex;
+			align-items: flex-start;
+			gap: 0.75em;
+			font-size: 0.95em;
+			line-height: 1.55;
+			color: #444;
+		}
+
+		.values-list li .icon {
+			flex-shrink: 0;
+			width: 28px;
+			height: 28px;
+			background: linear-gradient(135deg, #2d6a4f, #52b788);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.85em;
+			margin-top: 2px;
+		}
+
+		/* ── POST SECTION ── */
+		.post header.major p {
+			font-family: 'DM Sans', sans-serif;
+			font-size: 1em;
+			font-weight: 300;
+			line-height: 1.65;
+		}
+
+		.post p {
+			font-family: 'DM Sans', sans-serif;
+			line-height: 1.75;
+			color: #444;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<div id="wrapper">
+
+		<!-- PROFILE HERO -->
+		<div class="profile-hero">
+			<span class="chip">About Me</span>
+			<div class="profile-img-wrap">
+				<img src="images/Jackt.jpg" alt="Jack Kgwale" />
 			</div>
+			<h1>Jack Kgwale</h1>
+			<p class="tagline">Mapping Sustainable Futures — applying GIS and data to strengthen disaster preparedness, environmental management, and community resilience across Africa.</p>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Jack Kgwale</a>
+		</header>
 
-	</body>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html">Experience</a></li>
+				<li class="active"><a href="generic.html">My Profile</a></li>
+				<li><a href="elements.html">Skills</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<section class="post">
+				<header class="major">
+					<h1>My Profile</h1>
+					<p>Where spatial thinking meets community impact.</p>
+				</header>
+
+				<p>I'm Jack Kgwale — a Geography and Environmental Science graduate from the University of Pretoria with a passion for how data, maps, and people converge to build more resilient communities. My work sits at the intersection of technical GIS expertise and on-the-ground community engagement, using spatial tools to tackle real-world challenges from disaster preparedness to long-term environmental monitoring.</p>
+
+				<p>Through my leadership in youth-led initiatives like WAFARI — a project that has raised flood awareness across multiple African countries — I've seen firsthand how maps can be instruments of advocacy and change, not just technical outputs. I've led teams, designed surveys, co-organised mapathons, and brought spatial storytelling to community audiences and policymakers alike.</p>
+
+				<div class="about-grid">
+					<div class="about-card">
+						<div class="card-icon">🗺️</div>
+						<h3>Spatial Thinker</h3>
+						<p>Skilled in GIS, remote sensing, and spatial analysis — I use maps to reveal patterns, risks, and opportunities invisible in raw data.</p>
+					</div>
+					<div class="about-card">
+						<div class="card-icon">🤝</div>
+						<h3>Community Focused</h3>
+						<p>I design solutions with communities, not just for them. Every dataset represents real people, and I keep that at the centre of my work.</p>
+					</div>
+					<div class="about-card">
+						<div class="card-icon">🌱</div>
+						<h3>Sustainability-Driven</h3>
+						<p>Committed to environmental stewardship — from erosion control to land-use planning, I pursue practical, lasting impact.</p>
+					</div>
+					<div class="about-card">
+						<div class="card-icon">🌐</div>
+						<h3>Globally Minded</h3>
+						<p>Adaptable and curious, I'm drawn to challenges that cross borders and push me to grow beyond my immediate environment.</p>
+					</div>
+				</div>
+
+				<p>I'm skilled in remote sensing, spatial analysis, and environmental planning, but just as importantly, I care deeply about who benefits from this work. Whether building flood preparedness campaigns, collaborating with researchers, or presenting to policymakers, I bring integrity, curiosity, and a drive to make a measurable difference.</p>
+
+				<div class="profile-quote">
+					<p>"You cannot protect the environment unless you empower people, you inform them, and you help them understand that these resources are their own."</p>
+					<cite>— Wangari Maathai</cite>
+				</div>
+
+				<h2 style="font-family:'Playfair Display',serif;">What Drives Me</h2>
+				<ul class="values-list">
+					<li>
+						<span class="icon">🔬</span>
+						<span><strong>Evidence-based action:</strong> I ground every campaign, map, and recommendation in real data — collected through fieldwork, surveys, and satellite imagery.</span>
+					</li>
+					<li>
+						<span class="icon">📣</span>
+						<span><strong>Youth advocacy:</strong> I believe young people are not just the future of environmental action — we are its present. I've built and led programmes that prove it.</span>
+					</li>
+					<li>
+						<span class="icon">🧩</span>
+						<span><strong>Continuous learning:</strong> From open-source GIS to biodiversity monitoring platforms, I actively seek new tools and perspectives that sharpen my impact.</span>
+					</li>
+					<li>
+						<span class="icon">🌍</span>
+						<span><strong>African context:</strong> My work is rooted in understanding the specific climate vulnerabilities, governance structures, and community dynamics of the African continent.</span>
+					</li>
+				</ul>
+
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h2>Get in Touch</h2>
+				<form method="post" action="https://formspree.io/f/xnnvkdyj">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="Your name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" placeholder="your@email.com" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3" placeholder="What would you like to discuss?"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="split contact">
+				<section class="alt">
+					<h3>Location</h3>
+					<p>Johannesburg, Gauteng<br />South Africa</p>
+				</section>
+				<section>
+					<h3>Phone</h3>
+					<p><a href="tel:+27714778448">(+27) 71-477-8448</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="mailto:jackteekgwale@gmail.com">jackteekgwale@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<div id="copyright">
+			<ul><li>&copy; Jack Kgwale 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>
