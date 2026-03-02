@@ -1,238 +1,470 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Project Portfolio - Jack Kgwale</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<title>Jack Kgwale | GIS & Environmental Science Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Portfolio of Jack Kgwale - Geography & Environmental Science graduate specialising in GIS, disaster risk reduction, and community resilience across Africa." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		:root {
+			--green: #2d6a4f;
+			--green-light: #52b788;
+			--earth: #a07850;
+			--cream: #f5f0e8;
+			--dark: #1a1a2e;
+			--accent: #e76f51;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		/* ── HERO INTRO ── */
+		#intro {
+			background: linear-gradient(135deg, #0d1b2a 0%, #1a2f1e 50%, #0d1b2a 100%);
+			position: relative;
+			overflow: hidden;
+			padding: 6em 2em;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>This<br /
-						<h1>is<br />
-						Jack Kgwale</h1>
-						<p>A Geography and Environmental Science graduate with hands-on experience in GIS, biodiversity monitoring, flood risk awareness, and community-based climate resilience projects across Africa. This portfolio showcases applied research, spatial analysis, conservation data work, and youth-led environmental action. <a href="https://www.linkedin.com/in/jack-kgwale-60190b219/">@JackKgwale</a> 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+		#intro::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background:
+				radial-gradient(ellipse 60% 40% at 20% 30%, rgba(82,183,136,0.18) 0%, transparent 60%),
+				radial-gradient(ellipse 50% 50% at 80% 70%, rgba(231,111,81,0.12) 0%, transparent 55%),
+				url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2352b788' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			pointer-events: none;
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">EXPERIENCE</a>
-					</header>
+		#intro .tag {
+			display: inline-block;
+			font-family: 'DM Mono', monospace;
+			font-size: 0.7em;
+			letter-spacing: 0.25em;
+			text-transform: uppercase;
+			color: var(--green-light);
+			border: 1px solid rgba(82,183,136,0.4);
+			padding: 0.4em 1.2em;
+			border-radius: 2em;
+			margin-bottom: 1.5em;
+			animation: fadeUp 0.8s ease both;
+		}
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">EXPERIENCE</a></li>
-							<li><a href="generic.html">MY PROFILE</a></li>
-							<li><a href="elements.html">SKILLS</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+		#intro h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: clamp(2.8em, 7vw, 5.5em);
+			font-weight: 900;
+			line-height: 1.05;
+			color: #fff;
+			margin-bottom: 0.4em;
+			animation: fadeUp 0.9s 0.1s ease both;
+		}
 
-				<!-- Main -->
-					<div id="main">
+		#intro h1 span {
+			color: var(--green-light);
+		}
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">2023</span>
-									<h2><a href="#">🌍GEOGRAPHY & <br />
-									ENVIRONMENTAL-BASED PROJECTS</a></h2>
-									<p><section style="padding: 2em; background-color: #f9f9f9; border-radius: 12px; max-width: 900px; margin: auto;">
-  <h2 style="text-align: center; font-size: 2em; color: #2c3e50;">🌍 WAFARI (Water From a Rock Initiative)</h2>
-  <p style="text-align: center; font-style: italic; color: #555;">Youth-Led Disaster Awareness & Flood Resilience Program</p>
-  <p style="text-align: center; color: #777;">Global Water Partnership | Water Youth Network | Youth-Led Network across Africa</p>
+		#intro .subtitle {
+			font-family: 'DM Sans', sans-serif;
+			font-size: 1.05em;
+			font-weight: 300;
+			color: rgba(255,255,255,0.65);
+			max-width: 560px;
+			line-height: 1.7;
+			margin: 0 auto 2em;
+			animation: fadeUp 1s 0.2s ease both;
+		}
 
-  <p style="margin-top: 1.5em; color: #333; line-height: 1.6;">
-    <strong>WAFARI</strong> is a youth-led initiative aimed at improving flood awareness and resilience in vulnerable African communities through data-driven outreach, disaster preparedness workshops, and targeted surveys. It bridges the gap between climate science and community-level action by translating technical concepts into practical, understandable knowledge for everyday citizens.
-  </p>
+		#intro .hero-stats {
+			display: flex;
+			gap: 2.5em;
+			justify-content: center;
+			margin-bottom: 2.5em;
+			flex-wrap: wrap;
+			animation: fadeUp 1s 0.3s ease both;
+		}
 
-  <ul style="margin-top: 1em; padding-left: 1.2em; color: #333; line-height: 1.6;">
-    <li><strong>Leadership Role:</strong> Led and co-designed community-centered flood awareness workshops and survey campaigns across South Africa and beyond as part of the Disaster Awareness Team.</li>
-    <li><strong>Cross-Border Data Collection:</strong> Conducted surveys in multiple African countries to assess local flood risks and preparedness, building a unique pan-African dataset for youth-led climate action.</li>
-    <li><strong>Campus Mobilization:</strong> Organized university-based flood awareness drives and info sessions using visual tools, mapping demos, and personal storytelling.</li>
-    <li><strong>Award Recognition:</strong> Recipient of the <em>2023 Youth Changemaker Award</em> from Global Water Partnership, WMO, and Water Youth Network for innovation and impact in grassroots water resilience.</li>
-    <li><strong>Evidence-Based Action:</strong> Used survey findings to tailor localized preparedness strategies and design community-focused workshops based on real needs.</li>
-  </ul>
-</section>
-</p>
-								</header>
-								<a href="#" class="image main"><img src="images/WAFARI.png" alt="" /></a>
-								<div style="display:flex;gap:10px;justify-content:auto"></a><a href="#" class="image main"><img src="images/Jack.jpeg" alt="" style="width:100%; max-width:400px; height:auto; display:block; margin: 0 auto;"></a></div>
-								<div style="text-align: center;">
-								<ul class="actions special">
-									<li><a href="https://www.gwp.org/en/GWP-SouthernAfrica/About-GWP-SAF/more/News/celebration-to-honour-winners-of-the-water-changemaker-innovation-awards-2023-held-at-cop-28/" class="button large">Full Story</a></li>
-								</ul>
-							</article>
+		#intro .hero-stats .stat {
+			text-align: center;
+		}
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">2023</span>
-										<h2><a href="#">GIBS<br />
-										Experience Day 2023</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/GIBS2.jpg" alt="" /></a>
-									<p>In 2023, I was selected to attend the GIBS Experience Day as a student at the University of Pretoria. The event offered a dynamic mix of classroom simulations, career talks, and networking opportunities. I had the chance to meet and learn from seasoned professionals, explore the GIBS campus, and connect with fellow students interested in business and leadership. It was an eye-opening experience that deepened my appreciation for strategic thinking and professional growth.</p>
-									<ul class="actions special">
-										<li><a href="https://www.gibs.co.za/programmes/gibs-open-day---may-2024" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2024</span>
-										<h2><a href="#">Mapathon 2024<br />
-										 YouthMappers, University of Pretoria</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Mapathon.png" alt="" /></a>
-									<p>On July 26, 2024, I co-organized and participated in a Mapathon hosted by YouthMappers in the Department of Geography, Geoinformatics and Meteorology at the University of Pretoria. The event focused on mapping buildings, roads, and water pathways in Tongaat, KwaZulu-Natal, following the devastating tornado that struck the region on June 3, 2024. Using the HOT Tasking Manager, we contributed to crucial humanitarian mapping efforts aimed at supporting displaced communities and improving disaster response. The event was held in person and online, drawing participants from across Africa. This Mapathon formed part of the Water from the Rock initiative, a youth-led project I co-founded that promotes access to early warning systems and disaster risk information. The project won the 2023 Global Integrated Flood and Drought Management Competition, and is supported by the WMO, GWP, and Water Youth Network.</p>
-									<ul class="actions special">
-										<li><a href="https://www.up.ac.za/geography-geoinformatics-and-meteorology/news/post_3247277-mapathon-youthmappers-26-july-2024" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2024</span>
-										<h2><a href="#">Stream Discharge Field Project <br />
-										Olifantspruit</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Research.jpg" alt="" /></a>
-									<p>As part of our final-year research, we investigated the variables influencing stream discharge through intensive fieldwork at Olifantspruit, under the University of Pretoria’s Faculty of Natural and Agricultural Sciences. Using velocity and cross-sectional area measurements, our team, including myself (Jack Kgwale), collected and analyzed hydrological data to better understand flow dynamics in the catchment. This hands-on experience strengthened my skills in environmental data collection, analysis, and teamwork in real-world conditions.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2024</span>
-										<h2><a href="#">Field Visit to Hydromulch<br />
-										Erosion Control in Agriculture and Construction</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Hydo.jpg" alt="" /></a>
-									<p>As part of our academic enrichment, we had the opportunity to visit Hydromulch to explore modern erosion control techniques, with a particular focus on agriculture and construction.This visit deepened our understanding of sustainable land management practices and innovative solutions to soil erosion challenges. It was a valuable hands-on experience in linking environmental science with industry applications.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">Remote Internship at Kartoza<br />
-										Applied GIS and Open-Source Geospatial Work</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/aboutkartoza.jpg" alt="" /></a>
-									<p>As part of a remote internship with Kartoza, I gained hands-on experience working with GIS and open-source geospatial tools in a professional environment. The internship strengthened my technical skills, problem-solving ability, and understanding of how spatial data is applied to real-world environmental and planning challenges through collaborative, remote workflows.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-										</article>
-								<article>
-									<header>
-										<span class="date">2025</span>
-										<h2><a href="#">Biodiversity Monitoring Internship at Wild Impact<br />
-										Wildlife Data Analysis and Conservation Support</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images\World-of-WI-Map_presentation-slide-1920x1080.png" alt="" /></a>
-									<p>As a Biodiversity Monitoring Intern at Wild Impact, I am gaining hands-on experience in remote wildlife monitoring and conservation data management using Trap Tagger. The internship is strengthening my skills in ecological data interpretation, attention to detail, and the use of digital tools to support biodiversity research and conservation decision-making through collaborative, remote workflows.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
+		#intro .hero-stats .stat .num {
+			display: block;
+			font-family: 'Playfair Display', serif;
+			font-size: 2em;
+			font-weight: 700;
+			color: var(--green-light);
+		}
 
-									
+		#intro .hero-stats .stat .label {
+			font-family: 'DM Mono', monospace;
+			font-size: 0.65em;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: rgba(255,255,255,0.45);
+		}
 
+		#intro .hero-cta {
+			display: flex;
+			gap: 1em;
+			justify-content: center;
+			flex-wrap: wrap;
+			animation: fadeUp 1s 0.4s ease both;
+		}
 
-								<article></article>
-								</article>
-							</section>
+		#intro .btn-primary {
+			font-family: 'DM Sans', sans-serif;
+			font-weight: 500;
+			background: var(--green-light);
+			color: #0d1b2a;
+			padding: 0.75em 2em;
+			border-radius: 3em;
+			text-decoration: none;
+			font-size: 0.9em;
+			transition: transform 0.2s, box-shadow 0.2s;
+			letter-spacing: 0.03em;
+		}
 
-						<!-- Footer -->
-							<footer>
-								
-				
+		#intro .btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(82,183,136,0.35);
+		}
 
-				
+		#intro .btn-outline {
+			font-family: 'DM Sans', sans-serif;
+			font-weight: 400;
+			background: transparent;
+			color: rgba(255,255,255,0.8);
+			padding: 0.75em 2em;
+			border-radius: 3em;
+			border: 1px solid rgba(255,255,255,0.25);
+			text-decoration: none;
+			font-size: 0.9em;
+			transition: border-color 0.2s, color 0.2s;
+		}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="https://formspree.io/f/xnnvkdyj">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>South Africa<br />
-								Gauteng, Johannesburg</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(+27) 71-477-8448</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">jackteekgwale@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							        <li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+		#intro .btn-outline:hover {
+			border-color: var(--green-light);
+			color: var(--green-light);
+		}
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+		@keyframes fadeUp {
+			from { opacity: 0; transform: translateY(24px); }
+			to   { opacity: 1; transform: translateY(0); }
+		}
 
+		/* ── NAV OVERRIDE ── */
+		#nav {
+			font-family: 'DM Sans', sans-serif;
+		}
+
+		/* ── SECTION HEADINGS ── */
+		#main .post.featured header.major h2 {
+			font-family: 'Playfair Display', serif;
+		}
+
+		/* ── PROJECT CARDS ── */
+		.posts article {
+			transition: transform 0.25s ease, box-shadow 0.25s ease;
+		}
+		.posts article:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+		}
+
+		/* ── AWARD BADGE ── */
+		.award-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
+			background: linear-gradient(135deg, #2d6a4f, #52b788);
+			color: #fff;
+			font-family: 'DM Mono', monospace;
+			font-size: 0.7em;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			padding: 0.35em 0.9em;
+			border-radius: 2em;
+			margin-bottom: 0.8em;
+		}
+
+		/* ── WAFARI SECTION ── */
+		.wafari-section {
+			background: linear-gradient(135deg, #f0f7f4, #fff);
+			border-left: 4px solid var(--green-light);
+			border-radius: 0 12px 12px 0;
+			padding: 2em 2em 2em 2em;
+			margin: 1em 0;
+			font-family: 'DM Sans', sans-serif;
+		}
+
+		.wafari-section h2 {
+			font-family: 'Playfair Display', serif;
+			color: var(--green);
+			font-size: 1.8em;
+			margin-bottom: 0.3em;
+		}
+
+		.wafari-section .meta {
+			font-family: 'DM Mono', monospace;
+			font-size: 0.7em;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #888;
+			margin-bottom: 1.2em;
+		}
+
+		.wafari-section ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.wafari-section ul li {
+			padding: 0.6em 0 0.6em 1.5em;
+			position: relative;
+			border-bottom: 1px solid rgba(0,0,0,0.06);
+			font-size: 0.95em;
+			line-height: 1.6;
+			color: #444;
+		}
+
+		.wafari-section ul li::before {
+			content: '▸';
+			position: absolute;
+			left: 0;
+			color: var(--green-light);
+		}
+
+		.wafari-section ul li:last-child {
+			border-bottom: none;
+		}
+
+		/* ── FOOTER FONT ── */
+		#footer {
+			font-family: 'DM Sans', sans-serif;
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<div id="wrapper" class="fade-in">
+
+		<!-- HERO INTRO -->
+		<div id="intro">
+			<span class="tag">🌍 Geography & GIS Portfolio</span>
+			<h1>Jack<br/><span>Kgwale</span></h1>
+			<p class="subtitle">Geography & Environmental Science graduate turning spatial data into community resilience — from flood mapping across Africa to open-source GIS and biodiversity conservation.</p>
+
+			<div class="hero-stats">
+				<div class="stat"><span class="num">5+</span><span class="label">Projects</span></div>
+				<div class="stat"><span class="num">2</span><span class="label">Awards</span></div>
+				<div class="stat"><span class="num">Africa</span><span class="label">Wide Impact</span></div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<div class="hero-cta">
+				<a href="#header" class="btn-primary scrolly">View My Work ↓</a>
+				<a href="generic.html" class="btn-outline">About Me</a>
+			</div>
+		</div>
 
-	</body>
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Experience</a>
+		</header>
 
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Experience</a></li>
+				<li><a href="generic.html">My Profile</a></li>
+				<li><a href="elements.html">Skills</a></li>
+			</ul>
+			<ul class="icons">
+				<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Featured: WAFARI -->
+			<article class="post featured">
+				<header class="major">
+					<span class="date">2023 – Present</span>
+					<div class="award-badge">🏆 2023 Youth Changemaker Award</div>
+					<h2><a href="#">WAFARI — Water From a Rock Initiative</a></h2>
+					<p>Youth-led flood resilience and disaster preparedness programme operating across Africa.</p>
+				</header>
+
+				<div class="wafari-section">
+					<h2>WAFARI</h2>
+					<p class="meta">Global Water Partnership · Water Youth Network · WMO</p>
+					<p>WAFARI bridges the gap between climate science and community-level action — translating flood risk data into practical preparedness tools for vulnerable African communities.</p>
+					<ul>
+						<li><strong>Leadership:</strong> Co-designed and led flood awareness workshops and survey campaigns across South Africa and beyond, as part of the Disaster Awareness Team.</li>
+						<li><strong>Pan-African data collection:</strong> Conducted surveys across multiple African countries, building a unique dataset to inform youth-led climate action.</li>
+						<li><strong>Campus mobilisation:</strong> Organised university-based flood awareness drives using GIS demos, visual tools, and personal storytelling.</li>
+						<li><strong>Award recognition:</strong> Recipient of the <em>2023 Youth Changemaker Award</em> from Global Water Partnership, WMO, and Water Youth Network.</li>
+						<li><strong>Evidence-based action:</strong> Used survey findings to design localised preparedness strategies grounded in real community needs.</li>
+					</ul>
+				</div>
+
+				<a href="#" class="image main"><img src="images/WAFARI.png" alt="WAFARI initiative" /></a>
+				<a href="#" class="image main" style="max-width:400px;margin:0 auto;display:block;"><img src="images/Jack.jpeg" alt="Jack Kgwale at WAFARI" style="width:100%;height:auto;" /></a>
+
+				<ul class="actions special" style="margin-top:2em;">
+					<li><a href="https://www.gwp.org/en/GWP-SouthernAfrica/About-GWP-SAF/more/News/celebration-to-honour-winners-of-the-water-changemaker-innovation-awards-2023-held-at-cop-28/" class="button large">Read the Full Story</a></li>
+				</ul>
+			</article>
+
+			<!-- Project Grid -->
+			<section class="posts">
+
+				<article>
+					<header>
+						<span class="date">2023</span>
+						<h2><a href="#">GIBS Experience Day</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/GIBS2.jpg" alt="GIBS Experience Day" /></a>
+					<p>Selected to attend the Gordon Institute of Business Science Experience Day at the University of Pretoria. Engaged with senior professionals through classroom simulations, career talks, and strategic leadership workshops — deepening my understanding of how environmental expertise translates into business and policy environments.</p>
+					<ul class="actions special">
+						<li><a href="https://www.gibs.co.za/programmes/gibs-open-day---may-2024" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">July 2024</span>
+						<h2><a href="#">Tongaat Tornado Mapathon — YouthMappers UP</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/Mapathon.png" alt="Tongaat Mapathon" /></a>
+					<p>Co-organised a humanitarian mapathon at the University of Pretoria's Department of Geography, Geoinformatics and Meteorology following the devastating Tongaat tornado (June 2024). Using the HOT Tasking Manager and OpenStreetMap, participants across Africa mapped roads, buildings, and water pathways to support displaced communities and improve disaster response coordination.</p>
+					<ul class="actions special">
+						<li><a href="https://www.up.ac.za/geography-geoinformatics-and-meteorology/news/post_3247277-mapathon-youthmappers-26-july-2024" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2024</span>
+						<h2><a href="#">Stream Discharge Field Study — Olifantspruit</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/Research.jpg" alt="Stream discharge fieldwork" /></a>
+					<p>Led final-year hydrological fieldwork at Olifantspruit under the University of Pretoria's Faculty of Natural and Agricultural Sciences. Using velocity gauges and cross-sectional area measurements, our team collected and analysed streamflow data to model catchment discharge dynamics — strengthening skills in environmental data collection, field analysis, and collaborative research.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2024</span>
+						<h2><a href="#">Hydromulch Site Visit — Erosion Control</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/Hydo.jpg" alt="Hydromulch site visit" /></a>
+					<p>Visited Hydromulch to explore cutting-edge erosion control technologies applied across agriculture and construction. The experience provided practical insight into sustainable land management and how industry-scale solutions can address soil degradation — directly connecting environmental science theory to real-world application.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2025</span>
+						<h2><a href="#">Remote Internship at Kartoza — Open-Source GIS</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/aboutkartoza.jpg" alt="Kartoza internship" /></a>
+					<p>Completed a remote internship with Kartoza, a leading open-source geospatial consultancy. Gained professional experience working with QGIS, spatial databases, and collaborative GIS workflows — applying spatial analysis to real-world environmental and planning challenges while developing skills in remote, team-based technical environments.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
+						<span class="date">2025</span>
+						<h2><a href="#">Biodiversity Monitoring Internship — Wild Impact</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="images/World-of-WI-Map_presentation-slide-1920x1080.png" alt="Wild Impact biodiversity monitoring" /></a>
+					<p>Working as a Biodiversity Monitoring Intern at Wild Impact, using Trap Tagger to process and interpret remote wildlife camera data. The role strengthens skills in ecological data management, species identification, and conservation decision-support — contributing directly to evidence-based wildlife protection strategies across Southern Africa.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">Full Story</a></li>
+					</ul>
+				</article>
+
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section>
+				<h2>Get in Touch</h2>
+				<form method="post" action="https://formspree.io/f/xnnvkdyj">
+					<div class="fields">
+						<div class="field">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" placeholder="Your name" />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" placeholder="your@email.com" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="3" placeholder="What would you like to discuss?"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" /></li>
+					</ul>
+				</form>
+			</section>
+			<section class="split contact">
+				<section class="alt">
+					<h3>Location</h3>
+					<p>Johannesburg, Gauteng<br />South Africa</p>
+				</section>
+				<section>
+					<h3>Phone</h3>
+					<p><a href="tel:+27714778448">(+27) 71-477-8448</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="mailto:jackteekgwale@gmail.com">jackteekgwale@gmail.com</a></p>
+				</section>
+				<section>
+					<h3>Social</h3>
+					<ul class="icons alt">
+						<li><a href="https://www.linkedin.com/in/jack-kgwale-60190b219/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/JackKgwale" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</section>
+			</section>
+		</footer>
+
+		<div id="copyright">
+			<ul><li>&copy; Jack Kgwale 2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+		</div>
+
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>
